@@ -1,0 +1,2 @@
+# Linux-bootcamp
+linux note
