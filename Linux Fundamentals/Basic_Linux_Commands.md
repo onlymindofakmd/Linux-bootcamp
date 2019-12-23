@@ -18,6 +18,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "*****"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "Some basic commands that are used often."
    ]
   },
@@ -26,6 +33,13 @@
    "metadata": {},
    "source": [
     "### Basic Linux Commands"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*****"
    ]
   },
   {
@@ -53,6 +67,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "*****"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "* -l long listing format.\n",
     "* -a "
    ]
@@ -62,6 +83,13 @@
    "metadata": {},
    "source": [
     "## man Keyboard Commands"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*****"
    ]
   },
   {
