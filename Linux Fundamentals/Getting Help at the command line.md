@@ -28,4 +28,4 @@
 * Storage(`贮存，贮藏(空间);存储(方式);付费托管`) location that has a name and a value.
 * Typically uppercase.
 * Access the contents by executing:
-** `echo $VAR_NAME`
+   `echo $VAR_NAME`
