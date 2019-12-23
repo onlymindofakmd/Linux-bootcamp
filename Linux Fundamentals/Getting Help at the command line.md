@@ -15,11 +15,11 @@
 
 *****
 
-* Enter  Move down one line.
-* Space  Move down one page.
-* g      Move to the top of the page.
-* G      Move to the bottom of the page.
-* q      Quit.
+* Enter - Move down one line.
+* Space - Move down one page.
+* g ----- Move to the top of the page.
+* G ----- Move to the bottom of the page.
+* q ----- Quit.
 
 ### Environmental Variables
 
@@ -28,4 +28,45 @@
 * Storage(`贮存，贮藏(空间);存储(方式);付费托管`) location that has a name and a value.
 * Typically uppercase.
 * Access the contents by executing:
-   `echo $VAR_NAME`
+*   `echo $VAR_NAME`
+
+### PATH
+
+*****
+
+* An environment variable.
+* Controls the command search path.
+* Contains a list of directories.
+* Access the contents by executing:
+*   `echo $PATH`
+
+### Which command exactly?
+
+*****
+
+* which a command.
+
+### Starting to Fish
+
+*****
+
+* Look at the directories in $PATH. `echo $PATH`
+* Look at the files in each directory. `ls /bin`
+* Use man to learn what the command does. `man ls`
+
+### Get Help with --help or -h
+
+*****
+
+* Add --help to a command to get help.
+* try -h if --help doesn't work.
+
+### Searching Man Pages
+
+*****
+
+* man -k SEARCH_TEAM
+
+
+
+
