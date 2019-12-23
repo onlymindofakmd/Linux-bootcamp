@@ -1,2 +1,5 @@
 # Linux-bootcamp
-linux note
+*****
+
+* Learn Linux
+* Learn English
