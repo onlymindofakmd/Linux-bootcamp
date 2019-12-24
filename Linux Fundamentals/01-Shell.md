@@ -9,7 +9,7 @@
 * The default interface to Linux
 * A program that accepts your commands and executes those commands
 * Also called a command line interpreter（`口译工作者;口译译员;演绎(音乐、戏剧中人物等)的人;解释程序`）
-### The prompt
+### The prompt? don't understand
 *****
 * [jason@linuxsvr ~]$
 * [root@linuxsvr:~]#

@@ -66,7 +66,3 @@
 *****
 
 * man -k SEARCH_TEAM
-
-
-
-
