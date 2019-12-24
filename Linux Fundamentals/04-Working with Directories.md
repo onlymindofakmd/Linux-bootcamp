@@ -5,7 +5,7 @@
 *****
 
 * How to use directory shortcuts.
-* How to execute commands outside of $PATH.
+* How to execute commands outside of `$PATH`.
 * How to create or remove directories.
 
 ### Directories
@@ -20,30 +20,30 @@
 
 *****
 
-* . ----------- This directory
-* .. ---------- The parent directory
-* cd - -------- Change to the previous directory
+* `.` ----------- This directory
+* `..` ---------- The parent directory
+* `cd` - -------- Change to the previous directory
 
 ### Directory Separator(`分隔符;分割线;隔膜;分隔线;分离器`)
 
 *****
 
-* / ----------- Directory separator(forward slash).
+* `/` ----------- Directory separator(forward slash).
 
 ### Executing Commands
 
 *****
 
-* $PATH determines command search path.
+* `$PATH` determines command search path.
 * You can specify(`具体说明;明确规定;详述;详列`) a command with a full path.
-* You can execute command not in $PATH.
-* ./command = Execute command in this dir.
+* You can execute command not in `$PATH`.
+* `./command` = Execute command in this dir.
 
 ### Creating and Removing Directories
 
 *****
 
-* mkdir [-p] directory - Create a directory.
-* rmdir [-p] directory - Remove a directory.
-* rm -rf directory - Recursively(`递归地;递归;递归的;递归删除;回归`) removes directory.
+* `mkdir [-p] directory` - Create a directory.
+* `rmdir [-p] directory` - Remove a directory.
+* `rm -rf directory` - Recursively(`递归地;递归;递归的;递归删除;回归`) removes directory.
 
