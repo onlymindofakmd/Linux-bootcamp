@@ -11,7 +11,7 @@
 * How to handle spaces in file names.
 * What symbolic(`使用象征的;作为象征的;象征性的`) links are.
 
-### Decoding ls -l Output
+### Decoding `ls -l` Output
 
 *****
 
@@ -45,7 +45,7 @@ $ ls -l
 Use `ls -F` to reveal file types.
 * / ----- Directory
 * @ ----- Link
-* * ----- Executable
+* \* ----- Executable
 
 ### Symbolic Links
 
@@ -54,8 +54,8 @@ Use `ls -F` to reveal file types.
 * A link is a point to the actual file or directory.
 * Use the link as if it was the file.
 * A link can be used to create a shortcut.
-*   Use for long file or directory names.
-*   Use to indicate(`表明;显示;象征;暗示;间接提及;示意`) the current version of software.
+* * Use for long file or directory names.
+* * Use to indicate(`表明;显示;象征;暗示;间接提及;示意`) the current version of software.
 
 ### Listing Files by Time and in Reverse
 
@@ -97,8 +97,8 @@ Similar to `ls -R`, but creates visual(`视力的;视觉的`) output.
 
 * Just say no to spaces.
 * Alternatives(`其他选择;另类投资;备选方案;替代法;替代品`):
-*   Hyphens(-)
-*   Underscores(_)
-*   CamelCase
+* * Hyphens(-)
+* * Underscores(_)
+* * CamelCase
 * Encapsulate(`封装`) the entire(`全部的;整个的;完全的`) file name in quotes(`引用;引述;举例说明;开价;出价;报价`).
 * Use a backslash(\\) to escape spaces.
