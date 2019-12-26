@@ -141,8 +141,8 @@ Symbolic | Octal
 
 * File Creation mask determines default permissions.
 * If no mask were used permissions would be :
-* * 777 for directories
-* * 666 for files
+  * 777 for directories
+  * 666 for files
 
 ### The umask Command
 
@@ -166,6 +166,6 @@ Creations Permission | 770 | 660
 * umask `0022` is the same as umask `022`
 * `chmod 0644` is the same as `chmod 644`
 * The specil modes are: 
-* * setuid
-* * setgid
-* * sticky
+  * setuid
+  * setgid
+  * sticky
