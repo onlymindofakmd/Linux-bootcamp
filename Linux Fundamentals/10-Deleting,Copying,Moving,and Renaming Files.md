@@ -66,8 +66,8 @@ Command | Description
 
 Command | Description
 :--: | :--:
-`c` | Create a tar archive.
-`x` | Extract files from the archive.
+`c` | Create a tar archive(`档案;档案馆;档案室`).
+`x` | Extract(`Extract`) files from the archive.
 `t` | Display the table of contents(list)
 `v` | Be verbose.
 `z` | Use compression
@@ -90,3 +90,6 @@ Command | Description
 
 Command | Description
 :--: | :--:
+`du` | Estimates(`估价;估算`) file usage
+`du -k` | Display sizes of Kilobytes
+`du -h` | Display sizes in human readable format
