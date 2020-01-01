@@ -42,3 +42,49 @@ Command | Description
 `!string` | Repeat the most recent command starting with "string"
 
 ### More ! Syntax 
+
+*****
+
+```
+# <Event> <Separator> <Word>
+!:N
+```
+![esyntax](esyntax.png "esyntax")
+
+### ! Syntax Examples
+
+*****
+
+```
+$ head files.txt sorted_files.txt notes.txt
+<Output from head command here>
+$ !!
+head files.txt sorted_files.txt notes.txt
+<Output from head command here>
+$ vi !:2
+vi sorted_files.txt
+<vi editor starts>
+```
+
+### Even More ! Syntax
+
+*****
+
+![more](more.png "more")
+
+### Searching Shell History
+
+*****
+
+Command | Description
+:--: | :--:
+Ctrl-r | Reverse shell history search
+Enter | Execute the command
+Arrows | Change the command
+Ctrl-g | Cancel the search
+
+### Tab Completion
+
+*****
+
+Tab - Autocompletion commands, files, directories, path, Environminet variables, usernames(~)
