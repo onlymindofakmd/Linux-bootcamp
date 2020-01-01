@@ -26,3 +26,15 @@ Command | Description
 `\n` | Newline
 `\t` | Current time in 24-hour HH:MM:SS format
 `\T` | Current time in 12-hour HH:MM:SS format
+`\@` | Current time in 12-hour am/pm format
+`\A` | Current time in 24-hour HH:MM format
+`\u` | Username of the current user
+`\w` | Current working directory
+`\W` | Basename of the current working directory
+`\$` | If the effective UID is 0, a #, otherwise a $
+
+### Persist PS1 Changes
+
+*****
+
+`$ echo 'export PS1="[\u@\h \w]\$"' >> ~/.bash_profile`

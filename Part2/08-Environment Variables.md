@@ -27,7 +27,7 @@ USER | The username of the current user
 
 *****
 
-* `printevn` - Print all or part of environment.
+* `printenv` - Print all or part of environment.
 * `echo $ENV_VAR` - Print the ENV_VAR variable.
 
 ### Exporting Environment Varialbes
