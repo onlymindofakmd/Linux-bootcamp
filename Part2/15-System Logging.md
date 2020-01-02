@@ -67,3 +67,117 @@ Code | Severity | Keyword | Description
 * syslog-ng
 
 ### rsyslog
+
+*****
+
+```
+/etc/rsyslog.conf:
+$IncludeConfig /etc/rsyslog.d/*.conf
+```
+
+### Logging Rules
+
+*****
+
+* Selector field
+  * FACILITY.SEVERITY
+  * mail.*
+  * mail
+  * FACILITY.none
+  * FACILITY_1.SEVERITY; FACILITY_2.SEVERITY
+* Action field
+  * Determines how a message is processed
+
+### Example Logging Rule
+
+*****
+
+```
+mail.* - /var/log/mail.log
+```
+
+### Caching vs Non-caching
+
+*****
+
+* Caching is used if the path starts with a hyphen
+  * mail.info    -/var/long/mail.info
+* You may lose some messages during a system crash if you are using caching mode
+* Using caching mode can improve I/O performance
+
+### Example Logging Rules
+
+*****
+
+```
+mail.info -/var/log/mail.info
+mail.warn -/var/log/mail.warn
+mail.err /var/log/mail.err
+auth,authpriv.* /var/log/auth.log
+*.*;auth.none,authpriv.none -/var/log/syslog
+*.info;mail.none;authpriv.none;cron.none /var/log/messages
+```
+
+### logger
+
+*****
+
+```
+logger [option] message
+```
+
+* Options:
+  * -p FACILITY.SEVERITY
+  * -t TAG
+
+### logger
+
+*****
+
+```
+$ logger -p mail.info -t mailtest "Test."
+$ sudo tail -1 /var/log/mail.log
+Apr 4 14:33:16 linuxsvr mailtest: Test.
+```
+
+### logrotate
+
+*****
+
+```
+/etc/logrotate.conf:
+include /etc/logrotate.d
+```
+
+### Example logrotate.conf
+
+*****
+
+```
+weekly
+rotate 4
+create
+compressed
+include /etc/logrotate.d
+/var/log/debug
+/var/log/messages
+{
+rotate 4
+weekly
+missingok
+notifempty
+compress
+sharedscripts
+postrotate
+reload rsyslog >/dev/null 2>&1 || true
+endscript
+}
+```
+
+### Test the logrotate configuration
+
+*****
+
+```
+# logrotate -fv /etc/logrotate.conf
+```
