@@ -27,4 +27,9 @@
   * 1) OS, 2) User home directories
   * As a system administrator, you decide.
 
-### 
+### Partitioning
+
+*****
+
+* Can protect the overall system.
+* Keep users from creating outages by using a home directory partition
