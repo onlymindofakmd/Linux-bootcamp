@@ -33,3 +33,4 @@
 
 * Can protect the overall system.
 * Keep users from creating outages by using a home directory partition
+
