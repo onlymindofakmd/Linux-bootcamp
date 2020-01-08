@@ -34,3 +34,7 @@
 * Can protect the overall system.
 * Keep users from creating outages by using a home directory partition
 
+```
+I must review things i write before.
+But these days i don't want to learn any more
+```
