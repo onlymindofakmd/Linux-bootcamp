@@ -78,7 +78,7 @@ Command | Description
 `apt-get install [-y] package` | Install package
 `apt-get remove package` | Remove package, leaving configuration
 `apt-get purge package` | Remove package, deleting configuration
-`apt-cache show packaage` | Display information about package
+`apt-cache show package` | Display information about package
 
 ### dpkg
 

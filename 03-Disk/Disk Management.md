@@ -36,5 +36,5 @@
 
 ```
 I must review things i write before.
-But these days i don't want to learn any more
+But these days i don't want to learn any more.
 ```
