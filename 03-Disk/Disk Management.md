@@ -105,3 +105,153 @@ umount /home
 ```
 fdisk /path/to/device
 ```
+
+### File Systems
+
+*****
+
+* ext = Extended file system
+  * ext2, ext3, and ext4 are later releases
+  * Often the default file system type
+* Other file systems:
+  * ReiserFS
+  * JFS
+  * XFS
+  * ZFS
+  * Btrfs
+
+```
+mkfs -t TYPE DEVICE
+mkfs -t ext3 /dev/sdb2
+mkfs -t ext4 /dev/sdb3
+mkfs.ext4 /dev/sdb3
+
+# ls -1 /sbin/mkfs*
+/sbin/mkfs
+/sbin/mkfs.btrfs
+/sbin/mkfs.cramfs
+/sbin/mkfs.ext2
+/sbin/mkfs.ext3
+/sbin/mkfs.ext4
+/sbin/mkfs.minix
+/sbin/mkfs.xfs
+```
+
+### Mounting with mount
+
+*****
+
+```
+# mount DEVICE MOUNT_POINT
+mount /dev/sdb3 /opt
+```
+
+### The mount command
+
+*****
+
+```
+# mount
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+...
+/dev/sda2 on / type xfs (rw,relatime,attr2,inode64,
+noquota)
+/dev/sdb3 on /opt type ext4 (rw,relatime,data=ordered)
+```
+
+### The df command
+
+*****
+
+```
+# df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda2 198G 1.7G 196G 1% /
+devtmpfs 489M 0 489M 0% /dev
+tmpfs 497M 0 497M 0% /dev/shm
+tmpfs 497M 6.5M 491M 2% /run
+tmpfs 497M 0 497M 0% /sys/fs/cgroup
+/dev/sdb3 484G 73M 459G 1% /opt
+```
+
+### Manual mounts do not persist
+
+*****
+
+In order to make mounts persist between reboots, add an entry in the /etc/fstab file
+
+### Unmount with unmount command
+
+```
+# umount DEVICE_OR_MOUNT_POINT
+umount /opt
+umount /dev/sdb3
+```
+
+### Preparing swap space
+
+*****
+
+```
+# mkswap /dev/sdb1
+Setting up swapspace version 1, size = 1048572 KiB
+no label, UUID=619dc6d9-1b0b-4a9a-9df5-bfc343fb8d6e
+# swapon /dev/sdb1
+# swapon -s
+Filename Type Size Used Priority
+/dev/sda1 partition 2047996 0 -1
+/dev/sdb1 partition 1048572 0 -2
+```
+
+### /etc/fstab - The File System Table
+
+*****
+
+* Controled what devices get mounted and where on boot.
+* Each entry is made up of 6 fields
+  * device
+  * mount point
+  * file system type
+  * mount options
+  * dump
+  * fsck order
+
+### Sample /etc/fstab file
+
+*****
+
+```
+# device mount point FS options dump fsck
+/dev/sda2 / xfs defaults 0 1
+/dev/sda1 swap swap defaults 0 0
+UUID=dbae4fe7-b06f-4319-85dc-b93ba4a16b17 / xfs defaults 0 1
+LABEL=opt /opt ext4 defaults 1 1
+/dev/sda1 swap swap defaults 0 0
+```
+
+### Viewing Labels and UUIDs
+
+*****
+
+```
+# lsblk –f
+NAME FSTYPE LABEL UUID MOUNTPOINT
+sda
+├─sda1 swap 1cb76bec-a1fa-4ac6-8296-c508e936b744 [SWAP]
+└─sda2 xfs root dbae4fe7-b06f-4319-85dc-b93ba4a16b17 /
+# blkid
+/dev/sda1: UUID="1cb76bec-a1fa-4ac6-8296-c508e936b744" TYPE="swap"
+/dev/sda2: LABEL="root" UUID="dbae4fe7-b06f-4319-85dc-b93ba4a16b17" TYPE="
+xfs"
+```
+
+### Labeling a file system.
+
+*****
+
+```
+# e2label /dev/sdb3 opt
+```
